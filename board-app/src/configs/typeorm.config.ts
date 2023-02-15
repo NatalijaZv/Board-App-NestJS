@@ -1,4 +1,5 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
+import { User } from 'src/auth/user.entity';
 import { Board } from 'src/boards/board.entity';
 // import { BoardRepository } from 'src/boards/board.repository';
 
@@ -13,7 +14,7 @@ export const TypeORMConfig: TypeOrmModuleOptions = {
   entities: [
     //   __dirname + '../**/*.entity.{js,ts}'
     // './**/*.entity.{js,ts}'
-    Board, 
+    Board, User
     ],
     
   synchronize: true,

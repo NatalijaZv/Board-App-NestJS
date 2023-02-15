@@ -4,9 +4,10 @@ import { TypeOrmModule } from '@nestjs/typeorm/dist';
 import { TypeORMConfig } from './configs/typeorm.config';
 import { DataSource } from 'typeorm';
 // import { DataSource } from 'typeorm';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(TypeORMConfig), BoardsModule],
+  imports: [TypeOrmModule.forRoot(TypeORMConfig), BoardsModule, AuthModule],
 })
 // export class AppModule {}
 
